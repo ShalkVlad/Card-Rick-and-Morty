@@ -34,24 +34,65 @@ export default {
   margin: 20px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
 }
+
 .character-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
 .character-card img {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   margin-bottom: 10px;
 }
+
 .character-card h2 {
   font-size: 1.5em;
   margin: 10px 0;
 }
+
 .character-card p {
   font-size: 1em;
   color: #555;
   margin: 5px 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .character-card {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .character-card h2 {
+    font-size: 1.2em;
+  }
+
+  .character-card p {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .character-card {
+    margin: 5px;
+    padding: 10px;
+  }
+
+  .character-card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .character-card h2 {
+    font-size: 1em;
+  }
+
+  .character-card p {
+    font-size: 0.8em;
+  }
 }
 </style>
