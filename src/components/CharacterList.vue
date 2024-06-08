@@ -120,12 +120,13 @@ export default {
 <style scoped>
 .filters {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 20px;
 }
 .filter-input,
 .filter-select {
-  margin: 0 10px;
+  margin: 10px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -144,6 +145,9 @@ export default {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+.filter-button:active {
+  background-color: #3e8e41;
 }
 .filter-button:hover {
   background-color: #45a049;
@@ -174,5 +178,19 @@ export default {
 }
 .pagination-button:not(:disabled):hover {
   background-color: #007bb5;
+}
+
+@media (max-width: 600px) {
+  .filters {
+    flex-direction: column;
+    align-items: center;
+  }
+  .filter-input,
+  .filter-select {
+    margin: 10px 0;
+  }
+  .pagination-button {
+    margin: 10px 0;
+  }
 }
 </style>
